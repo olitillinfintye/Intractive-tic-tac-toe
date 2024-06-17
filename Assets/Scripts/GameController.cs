@@ -22,13 +22,17 @@ public class GameController : MonoBehaviour
     public Text oPlayerScoreText;
     public Button xPlayerButton;
     public Button oPlayerButton;
-    public GameObject TieImage;
+    // public GameObject TieImage;
+
+    public GameObject TiePannel;
 
 
     // Start is called before the first frame update
     void Start()
     {
         GameSetup();
+        TiePannel.SetActive(false);
+        WinnerPannel.SetActive(false);
     }
 
     void GameSetup() 
@@ -134,7 +138,8 @@ public class GameController : MonoBehaviour
 
     public void Rematch() 
     {
-        TieImage.SetActive(false);
+        // TieImage.SetActive(false);
+        TiePannel.SetActive(false);
         xPlayerButton.interactable = true;
         oPlayerButton.interactable = true;
         GameSetup();
@@ -147,7 +152,8 @@ public class GameController : MonoBehaviour
 
     public void ReStart() 
     {
-        TieImage.SetActive(false);
+        // TieImage.SetActive(false);
+        TiePannel.SetActive(false);
         Rematch();
         xPlayersScore = 0;
         oPlayersScore = 0;
@@ -175,7 +181,8 @@ public class GameController : MonoBehaviour
     }
 
     void TieFunction() {
-        TieImage.SetActive(true);
+        // TieImage.SetActive(true);
+        TiePannel.SetActive(true);
 
     }
 }
