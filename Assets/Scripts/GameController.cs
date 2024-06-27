@@ -148,6 +148,7 @@ public class GameController : MonoBehaviour
             winningLines[i].SetActive(false);
         }
         WinnerPannel.SetActive(false);
+        Debug.Log("its pressed");
     }
 
     public void ReStart() 
